@@ -39,62 +39,69 @@
         }
     </style>
 </head>
-<body class="bg-white text-gray-900 font-sans">
-    <!-- Navigation Header -->
-    <header class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
-        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-            <div class="flex items-center space-x-2">
-                <div class="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                    <i class="fas fa-wifi text-white text-lg"></i>
+<body class="bg-gray-900 text-white">
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-gray-900 border-b border-gray-800 shadow-lg">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <div class="flex items-center gap-2">
+                    <div class="bg-gradient-to-r from-blue-500 to-cyan-500 p-2 rounded-lg">
+                        <i class="fas fa-wifi text-white text-xl"></i>
+                    </div>
+                    <span class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">FiberNet</span>
                 </div>
-                <span class="text-xl font-bold text-gray-900">Best Internet and TV</span>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#features" class="text-gray-300 hover:text-white transition-colors duration-300 font-medium">Features</a>
+                    <a href="#benefits" class="text-gray-300 hover:text-white transition-colors duration-300 font-medium">Benefits</a>
+                    <a href="#faq" class="text-gray-300 hover:text-white transition-colors duration-300 font-medium">FAQ</a>
+                    <a href="#testimonials" class="text-gray-300 hover:text-white transition-colors duration-300 font-medium">Testimonials</a>
+                    <a href="tel:8886322232" class="bg-gradient-to-r from-blue-500 to-cyan-500 px-6 py-2 rounded-lg font-semibold button-primary hover:shadow-lg text-white">Call Now</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden mobile-menu-button p-2 rounded-lg hover:bg-gray-800 transition-colors duration-300" aria-label="Toggle menu">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
             </div>
-            
-            <!-- Desktop Menu -->
-            <div class="hidden md:flex items-center space-x-8">
-                <a href="#home" class="text-gray-700 text-hover font-medium">Home</a>
-                <a href="#features" class="text-gray-700 text-hover font-medium">Features</a>
-                <a href="#benefits" class="text-gray-700 text-hover font-medium">Benefits</a>
-                <a href="#about" class="text-gray-700 text-hover font-medium">About</a>
-                <a href="#testimonials" class="text-gray-700 text-hover font-medium">Testimonials</a>
-                <a href="#faq" class="text-gray-700 text-hover font-medium">FAQ</a>
-                <a href="#contact" class="text-gray-700 text-hover font-medium">Contact</a>
-                <a href="tel:+18883224944" class="text-gray-700 text-hover font-medium">Free Call</a>
+
+            <!-- Mobile Menu -->
+            <div class="mobile-menu hidden md:hidden mt-4 pb-4 border-t border-gray-800">
+                <a href="#features" class="block py-2 px-4 text-gray-300 hover:text-white hover:bg-gray-800 rounded transition-colors duration-300">Features</a>
+                <a href="#benefits" class="block py-2 px-4 text-gray-300 hover:text-white hover:bg-gray-800 rounded transition-colors duration-300">Benefits</a>
+                <a href="#faq" class="block py-2 px-4 text-gray-300 hover:text-white hover:bg-gray-800 rounded transition-colors duration-300">FAQ</a>
+                <a href="#testimonials" class="block py-2 px-4 text-gray-300 hover:text-white hover:bg-gray-800 rounded transition-colors duration-300">Testimonials</a>
+                <a href="tel:8886322232" class="block mt-4 bg-gradient-to-r from-blue-500 to-cyan-500 px-6 py-2 rounded-lg font-semibold text-center text-white">Call Now</a>
             </div>
-            
-            <!-- Mobile Menu Button -->
-            <button class="mobile-menu-button md:hidden text-gray-900 focus:outline-none" id="mobileMenuBtn">
-                <i class="fas fa-bars text-2xl"></i>
-            </button>
         </nav>
-        
-        <!-- Mobile Menu -->
-        <div class="mobile-menu hidden md:hidden bg-white border-t border-gray-200" id="mobileMenu">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col space-y-4">
-                <a href="#home" class="text-gray-700 font-medium py-2 hover:text-blue-500 transition-colors duration-300">Home</a>
-                <a href="#features" class="text-gray-700 font-medium py-2 hover:text-blue-500 transition-colors duration-300">Features</a>
-                <a href="#benefits" class="text-gray-700 font-medium py-2 hover:text-blue-500 transition-colors duration-300">Benefits</a>
-                <a href="#about" class="text-gray-700 font-medium py-2 hover:text-blue-500 transition-colors duration-300">About</a>
-                <a href="#testimonials" class="text-gray-700 font-medium py-2 hover:text-blue-500 transition-colors duration-300">Testimonials</a>
-                <a href="#faq" class="text-gray-700 font-medium py-2 hover:text-blue-500 transition-colors duration-300">FAQ</a>
-                <a href="#contact" class="text-gray-700 font-medium py-2 hover:text-blue-500 transition-colors duration-300">Contact</a>
-            </div>
-        </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="hero-background min-h-screen flex items-center justify-center pt-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
-            <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight tracking-tight mb-6 fade-in-up">
-                Gigabit Fiber Optic | 5G Home Internet | Premium TV — Nationwide Coverage
-            </h1>
-            <p class="text-xl md:text-2xl text-gray-100 mb-12 max-w-3xl mx-auto leading-relaxed fade-in-up">
-                Next-level Internet, Fiber Optic, 5G & TV — We've got you covered!
-            </p>
-            <a href="tel:+18883224944" class="inline-block bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg button-hover shadow-lg text-lg fade-in-up">
-                Call for Free & Start Today!
-                <i class="fas fa-arrow-right ml-2"></i>
-            </a>
+    <section class="hero-gradient py-24 md:py-32 lg:py-40 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 left-0 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl"></div>
+            <div class="absolute bottom-0 right-0 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight tracking-tight">
+                    <span class="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">Fiber Optic Internet</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto">
+                    Experience the best internet plans in the USA with lightning-fast fiber optic connectivity, no contracts, and unbeatable reliability
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="tel:8886322232" class="bg-gradient-to-r from-blue-500 to-cyan-500 px-8 py-4 rounded-lg font-bold text-lg button-primary hover:shadow-2xl inline-flex items-center gap-2">
+                        <i class="fas fa-phone"></i> Call 1-888-632-2232
+                    </a>
+                    <a href="mailto:info@bestinternetandtv.com" class="border-2 border-cyan-500 px-8 py-4 rounded-lg font-bold text-lg hover:bg-cyan-500 hover:text-gray-900 transition-all duration-300 inline-flex items-center gap-2">
+                        <i class="fas fa-envelope"></i> Get More Info
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
